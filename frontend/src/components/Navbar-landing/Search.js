@@ -11,7 +11,7 @@ function Search({ handleClick }) {
 
   return (
     <div onClick={toggleSearch}>
-      <AiOutlineSearch className="md:text-xl lg:text-2xl text-txtLight hover:text-dark cursor-pointer" />
+      <AiOutlineSearch className="md:text-xl lg:text-2xl text-txtLight hover:text-dark cursor-pointer" size={25}/>
       {isSearchOpen && (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex justify-center items-start">
           <div

@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 const data = [
@@ -36,7 +37,9 @@ const MoreNews = () => {
           <div className="flex flex-col ">
             {/* top  */}
             <div className="flex items-center justify-between">
-              <p className="font-bold">Science & Technology</p>
+              <Fade>
+                <p className="font-bold">Science & Technology</p>
+              </Fade>
               <span className="mr-4">
                 <IoIosArrowDroprightCircle
                   size={30}
@@ -49,24 +52,26 @@ const MoreNews = () => {
           {data.map((val, index) => (
             <>
               {/* one item start  */}
-              <div className="flex cursor-pointer" key={index}>
-                <div className="w-[45%]">
-                  <img
-                    className="md:h-[5rem] w-full object-cover rounded-md"
-                    src={val.url}
-                    alt="news1 "
-                  />
+              <Fade>
+                <div className="flex cursor-pointer" key={index}>
+                  <div className="w-[45%]">
+                    <img
+                      className="md:h-[5rem] w-full object-cover rounded-md"
+                      src={val.url}
+                      alt="news1 "
+                    />
+                  </div>
+                  {/*This Is to separate three spans in sport section*/}
+                  <div className="flex flex-col h-[5rem] p-2 gap-y-1">
+                    <span className="font-bold text-[14px] font-timesNewRoman leading-relaxed tracking-wide">
+                      {val.data}
+                    </span>
+                    <span className="text-[10px] font-domine text-gray-400">
+                      {val.time}
+                    </span>
+                  </div>
                 </div>
-                {/*This Is to separate three spans in sport section*/}
-                <div className="flex flex-col h-[5rem] p-2 gap-y-1">
-                  <span className="font-bold text-[14px] font-timesNewRoman leading-relaxed tracking-wide">
-                    {val.data}
-                  </span>
-                  <span className="text-[10px] font-domine text-gray-400">
-                    {val.time}
-                  </span>
-                </div>
-              </div>
+              </Fade>
               {/* one items end  */}
             </>
           ))}
@@ -75,7 +80,9 @@ const MoreNews = () => {
           <div className="flex flex-col">
             {/* top  */}
             <div className="flex items-center justify-between">
-              <p className="font-bold">Economy</p>
+              <Fade>
+                <p className="font-bold">Economy</p>
+              </Fade>
               <span className="mr-4">
                 <IoIosArrowDroprightCircle
                   size={30}
@@ -88,24 +95,26 @@ const MoreNews = () => {
           {data.map((val, index) => (
             <>
               {/* one item start  */}
-              <div className="flex cursor-pointer" key={index}>
-                <div className="w-[45%]">
-                  <img
-                    className="md:h-[5rem] w-full object-cover rounded-md"
-                    src={val.url}
-                    alt="news1 "
-                  />
+              <Fade>
+                <div className="flex cursor-pointer" key={index}>
+                  <div className="w-[45%]">
+                    <img
+                      className="md:h-[5rem] w-full object-cover rounded-md"
+                      src={val.url}
+                      alt="news1 "
+                    />
+                  </div>
+                  {/*This Is to separate three spans in sport section*/}
+                  <div className="flex flex-col h-[5rem] p-2 gap-y-1">
+                    <span className="font-bold text-[14px] font-timesNewRoman leading-relaxed tracking-wide">
+                      {val.data}
+                    </span>
+                    <span className="text-[10px] font-domine text-gray-400">
+                      {val.time}
+                    </span>
+                  </div>
                 </div>
-                {/*This Is to separate three spans in sport section*/}
-                <div className="flex flex-col h-[5rem] p-2 gap-y-1">
-                  <span className="font-bold text-[14px] font-timesNewRoman leading-relaxed tracking-wide">
-                    {val.data}
-                  </span>
-                  <span className="text-[10px] font-domine text-gray-400">
-                    {val.time}
-                  </span>
-                </div>
-              </div>
+              </Fade>
               {/* one items end  */}
             </>
           ))}
@@ -114,7 +123,9 @@ const MoreNews = () => {
           <div className="flex flex-col">
             {/* top  */}
             <div className="flex items-center justify-between">
-              <p className="font-bold">Life Style</p>
+              <Fade>
+                <p className="font-bold">Life Style</p>
+              </Fade>
               <span className="mr-4">
                 <IoIosArrowDroprightCircle
                   size={30}
@@ -127,24 +138,26 @@ const MoreNews = () => {
           {data.map((val, index) => (
             <>
               {/* one item start  */}
-              <div className="flex cursor-pointer" key={index}>
-                <div className="w-[45%]">
-                  <img
-                    className="md:h-[5rem] w-full object-cover rounded-md"
-                    src={val.url}
-                    alt="news1 "
-                  />
+              <Fade>
+                <div className="flex cursor-pointer" key={index}>
+                  <div className="w-[45%]">
+                    <img
+                      className="md:h-[5rem] w-full object-cover rounded-md"
+                      src={val.url}
+                      alt="news1 "
+                    />
+                  </div>
+                  {/*This Is to separate three spans in sport section*/}
+                  <div className="flex flex-col h-[5rem] p-2 gap-y-1">
+                    <span className="font-bold text-[14px] font-timesNewRoman leading-relaxed tracking-wide">
+                      {val.data}
+                    </span>
+                    <span className="text-[10px] font-domine text-gray-400">
+                      {val.time}
+                    </span>
+                  </div>
                 </div>
-                {/*This Is to separate three spans in sport section*/}
-                <div className="flex flex-col h-[5rem] p-2 gap-y-1">
-                  <span className="font-bold text-[14px] font-timesNewRoman leading-relaxed tracking-wide">
-                    {val.data}
-                  </span>
-                  <span className="text-[10px] font-domine text-gray-400">
-                    {val.time}
-                  </span>
-                </div>
-              </div>
+              </Fade>
               {/* one items end  */}
             </>
           ))}

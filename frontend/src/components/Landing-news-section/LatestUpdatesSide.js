@@ -1,5 +1,7 @@
 import React from "react";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { Fade } from "react-awesome-reveal";
+
 
 const data = [
   {
@@ -51,6 +53,7 @@ const LatestUpdatesSide = () => {
           {data.map((val, index) => (
             <>
               {/* one item start  */}
+              <Fade>
               <div
                 className="flex items-center justify-center h-[6rem] "
                 key={index}
@@ -76,6 +79,7 @@ const LatestUpdatesSide = () => {
                 </div>
               </div>
               {/* one items end  */}
+              </Fade>
             </>
           ))}
 

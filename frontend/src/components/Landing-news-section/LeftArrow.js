@@ -1,11 +1,12 @@
 import React from "react";
 import LatestNews from "./LatestNew";
 import Scroll from "./Scroll";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { IoIosArrowDroprightCircle, IoIosArrowForward } from "react-icons/io";
+import { FaLocationArrow } from "react-icons/fa";
 
 // right  arrow
 
-const LeftArrow = ({data}) => {
+const LeftArrow = ({ data }) => {
   return (
     <>
       <div className="md:flex md:flex-col">
@@ -14,7 +15,14 @@ const LeftArrow = ({data}) => {
           <div className="flex items-center justify-between">
             <p className="font-bold">{data[0].category}</p>
             <span className="md:mr-4">
-              <IoIosArrowDroprightCircle size={30} className="cursor-pointer" />
+              <IoIosArrowDroprightCircle
+                size={30}
+                className="cursor-pointer hidden md:block"
+              />
+              <IoIosArrowForward
+                size={20}
+                className="cursor-pointer  md:hidden"
+              />
             </span>
           </div>
           <hr className=" border-t-4 border-black w-10 mt-0 mb-2 " />

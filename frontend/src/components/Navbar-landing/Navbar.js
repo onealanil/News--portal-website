@@ -4,8 +4,10 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import Search from "./Search";
 import User from "./ClickToRegister";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,15 +20,12 @@ function Navbar() {
 
   return (
     // nav section
-    <nav className="w-[90%] xl:w-[95%] 2xl:w-[80%] flex justify-between items-center border-b-[0.5px] border-txtLight px-4 py-4 flex-shrink md:gap-6 lg:gap-0 ">
+    <nav className="w-[100%] xl:w-[95%] 2xl:w-[80%] flex justify-between items-center border-b-[0.5px] border-txtLight px-4 py-4 flex-shrink md:gap-6 lg:gap-0 top-0 z-50 fixed bg-white">
       {/* logo div */}
-      <div className="flex items-center">
-        <h1 className="text-xs text-dark md:text-xl font-medium flex items-center gap-x-2">
-          <span className="bg-dark rounded-lg text-slate-100 px-3 py-2">
-            News
-          </span>
-          Portal
-        </h1>
+      <div className="flex items-center cursor-pointer select-none" onClick={()=>{
+        navigate("/")
+      }}>
+        <img src="./images/logo.png" alt="logo" className="w-[10rem] h-[3rem] select-none"/>
       </div>
 
       <div className="flex flex-wrap gap-2 sm:gap-4">
@@ -37,14 +36,14 @@ function Navbar() {
 
         {/* hamburger menu */}
         <div
-          className="md:hidden flex items-center justify-center"
+          className="md:hidden flex items-center justify-center "
           onClick={toggleMenu}
         >
-          <AiOutlineMenu />
+          <AiOutlineMenu size={25}/>
           {isOpen && (
-            <div className="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex justify-end">
+            <div className="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex justify-end ">
               <div
-                className="flex flex-col h-full w-64 bg-white"
+                className="flex flex-col h-full w-64 bg-white animate__animated animate__fadeInRightBig"
                 onClick={handleAreaClick}
               >
                 {/* close menu */}
@@ -53,7 +52,7 @@ function Navbar() {
                     className="text-txtLight w-5 h-5 hover:text-dark focus:outline-none"
                     onClick={toggleMenu}
                   >
-                    <AiOutlineClose className="text-lg" />
+                    <AiOutlineClose className="text-lg" size={25}/>
                   </button>
                   <User handleClick={handleAreaClick} />
                 </div>

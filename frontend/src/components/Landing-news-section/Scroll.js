@@ -1,10 +1,9 @@
 import React from "react";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Fade } from "react-awesome-reveal";
 
-
-const Scroll = ({data}) => {
+const Scroll = ({ data }) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -28,17 +27,28 @@ const Scroll = ({data}) => {
     (<div>Scroll</div>),
     (
       <div className="w-[99.9%]">
-        <Carousel responsive={responsive} className="w-full">
+        <Carousel responsive={responsive} className="w-full z-10">
           {data?.map((val, index) => (
             <>
               {/* one data start */}
-              <div className="md:pr-5 md:pb-5 md:pt-5 flex flex-col gap-y-3" key={index}>
-                <img src={val.url} alt="" className="w-full md:w-[14rem] object-cover h-[10rem] md:h-[8rem] rounded-md" />
-                <span className="font-bold font-timesNewRoman leading-relaxed tracking-wide">
-                  {val.data}
-                </span>
-                <p className="text-xs text-gray-400 font-domine">{val.time}</p>
-              </div>
+              <Fade>
+                <div
+                  className="md:pr-5 md:pb-5 md:pt-5 flex flex-col gap-y-3"
+                  key={index}
+                >
+                  <img
+                    src={val.url}
+                    alt=""
+                    className="w-full md:w-[14rem] object-cover h-[10rem] md:h-[8rem] rounded-md"
+                  />
+                  <span className="font-bold font-timesNewRoman leading-relaxed tracking-wide">
+                    {val.data}
+                  </span>
+                  <p className="text-xs text-gray-400 font-domine">
+                    {val.time}
+                  </p>
+                </div>
+              </Fade>
               {/* one data end  */}
             </>
           ))}

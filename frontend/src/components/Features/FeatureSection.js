@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 const data = [
@@ -62,50 +63,54 @@ const FeatureSection = () => {
       </div>
       <div className="flex p-5 gap-x-10">
         {/* left side  */}
-        <div className="w-[100%] md:w-[40%] ">
-          <div className="flex flex-col gap-y-3">
-            {/* image  */}
-            <div>
-              <img
-                src="./images/UML.jpg"
-                alt="feature-image"
-                className="rounded-md"
-              />
+          <div className="w-[100%] md:w-[40%] ">
+        <Fade>
+            <div className="flex flex-col gap-y-3">
+              {/* image  */}
+              <div>
+                <img
+                  src="./images/UML.jpg"
+                  alt="feature-image"
+                  className="rounded-md"
+                />
+              </div>
+              {/* data  */}
+              <div>
+                <p className="text-md font-timesNewRoman leading-relaxed tracking-wide">
+                  Although it became the Greater Boston Neapolitan Community
+                  (GBNC), For praying to god and celebrating, although it became
+                  the greater boston nepolitan community for praying to god and
+                  celebrating although it became the greater boston
+                </p>
+              </div>
             </div>
-            {/* data  */}
-            <div>
-              <p className="text-md font-timesNewRoman leading-relaxed tracking-wide">
-                Although it became the Greater Boston Neapolitan Community
-                (GBNC), For praying to god and celebrating, although it became
-                the greater boston nepolitan community for praying to god and
-                celebrating although it became the greater boston
-              </p>
-            </div>
+        </Fade>
           </div>
-        </div>
         {/* right side  */}
         <div className="hidden w-[60%] md:grid grid-cols-2 gap-4">
           {data.map((val, index) => (
             <>
               {/* one item start  */}
-              <div className="flex cursor-pointer" key={index}>
-                <div className="w-[45%]">
-                  <img
-                    className="md:h-[5rem] w-full object-cover rounded-md"
-                    src={val.url}
-                    alt="news1 "
-                  />
+              <Fade>
+                <div className="flex cursor-pointer" key={index}>
+                  <div className="w-[45%]">
+                    <img
+                      className="md:h-[5rem] w-full object-cover rounded-md"
+                      src={val.url}
+                      alt="news1 "
+                    />
+                  </div>
+                  {/*This Is to separate three spans in sport section*/}
+                  <div className="flex flex-col h-[5rem] p-2 gap-y-1">
+                    <span className="font-bold text-[14px] font-timesNewRoman leading-relaxed tracking-wide">
+                      {val.data}
+                    </span>
+                    <span className="text-[10px] font-domine text-gray-400">
+                      {val.time}
+                    </span>
+                  </div>
                 </div>
-                {/*This Is to separate three spans in sport section*/}
-                <div className="flex flex-col h-[5rem] p-2 gap-y-1">
-                  <span className="font-bold text-[14px] font-timesNewRoman leading-relaxed tracking-wide">
-                    {val.data}
-                  </span>
-                  <span className="text-[10px] font-domine text-gray-400">
-                    {val.time}
-                  </span>
-                </div>
-              </div>
+              </Fade>
               {/* one items end  */}
             </>
           ))}
