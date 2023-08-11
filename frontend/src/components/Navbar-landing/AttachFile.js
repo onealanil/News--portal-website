@@ -15,6 +15,17 @@ function AttachFile() {
     setSelectedFile(file);
     // Do something with the file
     console.log(file);
+    const mailtoLink = `mailto:${"khalifa@gmail.com"}?subject=${encodeURIComponent(
+      "Job Application"
+    )}&body=Please find attached my CV for the job application.`;
+
+    if (selectedFile) {
+      const formData = new FormData();
+      formData.append("attachment", selectedFile);
+      mailtoLink += "&attachment=" + encodeURIComponent(selectedFile.name);
+    }
+
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -33,7 +44,8 @@ function AttachFile() {
       {selectedFile && (
         <span className="text-gray-300 font-thin md:font-normal text-xs md:text-sm flex gap-2 items-center justify-center  flex-nowrap">
           {selectedFile.name}{" "}
-          <AiOutlineClose className="cursor-pointer bg-gray-400 bg-opacity-10 font-thin text-gray-300 hover:text-gray-100 rounded-full text-xs"
+          <AiOutlineClose
+            className="cursor-pointer bg-gray-400 bg-opacity-10 font-thin text-gray-300 hover:text-gray-100 rounded-full text-xs"
             onClick={() => {
               setSelectedFile(null);
               fileInputRef.current.value = "";

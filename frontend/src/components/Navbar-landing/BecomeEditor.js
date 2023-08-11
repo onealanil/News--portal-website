@@ -1,11 +1,20 @@
+import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import AttachFile from "./AttachFile";
 
 function BecomeEditor({ handleClick, handleOutClick }) {
+  const [email, setEmail] = useState("");
 
+  const SubmitRequest = (e) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:${"khalifaanil@gmail.com"}?subject=${encodeURIComponent(
+      "To became an editor"
+    )}&body=Please attached your CV, We Will reach you Soon , Thank you! ${email} .`;
+
+    window.location.href = mailtoLink;
+  };
 
   return (
-    <div className="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex justify-center items-center">
+    <div className="fixed inset-0 bg-gray-900 bg-opacity-75 z-50 flex justify-center items-center md:py-5">
       <div
         className="relative flex w-[80%] md:w-[75%] bg-dark rounded-sm"
         onClick={handleOutClick}
@@ -34,12 +43,18 @@ function BecomeEditor({ handleClick, handleOutClick }) {
               type="email"
               placeholder="your email"
               className="text-dark px-4 py-2 w-[100%] md:w-[40%] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
             {/* attach file */}
-            <AttachFile />
+            {/* <AttachFile /> */}
           </div>
           {/* submit button */}
-          <button className="bg-dark border-2 border-gray-400 px-2 md:w-[20%] rounded-md focus:border-gray-300">
+          <button
+            className="bg-dark border-2 border-gray-400 px-2 md:w-[20%] rounded-md focus:border-gray-300"
+            onClick={SubmitRequest}
+          >
             send request
           </button>
           {/* note */}

@@ -62,11 +62,11 @@ const Footer = () => {
                 News
               </p>
               <div className="flex flex-col gap-y-2">
-                <p className="text-gray-400">Local News</p>
-                <p className="text-gray-400 ">Politics</p>
-                <p className="text-gray-400 ">Business</p>
-                <p className="text-gray-400">Sports</p>
-                <p className="text-gray-400">Health</p>
+                <p className="text-gray-400 hover:text-red-500 cursor-pointer">Local News</p>
+                <p className="text-gray-400 hover:text-red-500 cursor-pointer ">Politics</p>
+                <p className="text-gray-400 hover:text-red-500 cursor-pointer ">Business</p>
+                <p className="text-gray-400 hover:text-red-500 cursor-pointer">Sports</p>
+                <p className="text-gray-400 hover:text-red-500 cursor-pointer">Health</p>
               </div>
             </div>
 
@@ -75,11 +75,11 @@ const Footer = () => {
                 Lifestyle
               </p>
               <div className="flex flex-col gap-y-2">
-                <p className="text-gray-400">Lifestyle News</p>
-                <p className="text-gray-400">Art</p>
-                <p className="text-gray-400">Diet</p>
-                <p className="text-gray-400">Fitness</p>
-                <p className="text-gray-400">People</p>
+                <p className="text-gray-400 hover:text-red-500 cursor-pointer">Lifestyle News</p>
+                <p className="text-gray-400 hover:text-red-500 cursor-pointer">Art</p>
+                <p className="text-gray-400 hover:text-red-500 cursor-pointer">Diet</p>
+                <p className="text-gray-400 hover:text-red-500 cursor-pointer">Fitness</p>
+                <p className="text-gray-400 hover:text-red-500 cursor-pointer">People</p>
               </div>
             </div>
 
@@ -94,7 +94,7 @@ const Footer = () => {
                     alt="facebook"
                     className="h-[20px] w-[20px] rounded-[55px] "
                   ></img>
-                  <p className="text-gray-400 ">Facebook</p>
+                  <p className="text-gray-400 hover:text-red-500 cursor-pointer">Facebook</p>
                 </div>
 
                 <div className="flex items-center gap-x-3">
@@ -103,7 +103,7 @@ const Footer = () => {
                     alt="facebook"
                     className="h-[20px] w-[20px] rounded-[55px] "
                   ></img>
-                  <p className="text-gray-400 ">Instagram</p>
+                  <p className="text-gray-400 hover:text-red-500 cursor-pointer">Instagram</p>
                 </div>
 
                 <div className="flex items-center gap-x-3">
@@ -112,7 +112,7 @@ const Footer = () => {
                     alt="facebook"
                     className="h-[20px] w-[20px] rounded-[55px] "
                   ></img>
-                  <p className="text-gray-400  ">Twitter</p>
+                  <p className="text-gray-400 hover:text-red-500 cursor-pointer ">Twitter</p>
                 </div>
               </div>
             </div>
